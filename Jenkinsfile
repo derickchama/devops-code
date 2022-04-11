@@ -26,5 +26,6 @@ pipeline {
                 echo 'Tomcat stage'
             }
         }
+                    
     }
 }
