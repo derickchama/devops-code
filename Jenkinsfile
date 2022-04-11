@@ -5,7 +5,7 @@ pipeline {
        maven 'M2_HOME'
     }
     environment {
-    registry = "derickch/jenkinspipeline"
+    registry = "derickch/jenkinspipelin"
     registryCredential = 'dockerID'
 }
     stages {
