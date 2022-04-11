@@ -3,26 +3,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Hello') {
             steps {
-                echo 'Build World'
+                echo 'Hello World'
             }
         }
-        stages {
-        stage('Test') {
-            steps {
-                echo 'Test step'
-            }
-        }
-            stages {
-        stage('Deploy') {
-            steps {
-                echo 'Deploy step'
-            }
-        }
-                stages {
-        stage('Tomcat') {
-            steps {
-                echo 'Tomcat stage'
-            }
-        }
+    }
+}
