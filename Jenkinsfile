@@ -6,13 +6,17 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                sleep 10
             }
         }
-        stages {
-        stage('Hello') {
+         stage('Hello') {
             steps {
                 echo 'Hello World'
-                sleep 10
+            }
+        }
+         stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
 }
