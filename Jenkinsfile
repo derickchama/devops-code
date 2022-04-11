@@ -4,6 +4,10 @@ pipeline {
     tools {
        maven 'M2_HOME'
     }
+    environment {
+    registry = "derickch/jenkinspipeline"
+    registryCredential = 'dockerID'
+}
     stages {
         stage('Build') {
             steps {
@@ -20,12 +24,8 @@ pipeline {
         }
          stage('Deploy') {
             steps {
-                echo 'Deploy Step'
-            }
-        }
-         stage('Tomcat') {
-            steps {
-                echo 'Tomcat Stage'
+                script {
+                 docker.build registry + ":$BUILD_NUMBER"
             }
         }
     }
